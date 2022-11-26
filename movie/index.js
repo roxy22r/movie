@@ -9,8 +9,9 @@ import {
 const router = Router();
 
 router.get('/', listAction);
-router.post('/delete/:id', removeAction);
+router.get('/delete/:id?', removeAction);
 router.get('/form/:id?', formAction);
+router.get('/upedat/:id?',editAction );
 router.post('/save', saveAction);
 
 export {router};

@@ -1,6 +1,7 @@
 import {getAll, remove, get, save} from './model.js';
 import {render} from './view.js';
 import {render as form} from './form.js';
+import {render as editMovieView} from'/.editMovie_View.js';
 import { request } from 'express';
 
 export async function listAction(request, response){
@@ -10,6 +11,7 @@ export async function listAction(request, response){
 }
 
 export async function removeAction(request,response){
+    console.log("test");
     const id = await get(parseInt(request.params.id, 10));
         await remove(id);
     response.redirect(request.baseUrl);
@@ -26,6 +28,11 @@ export async function formAction(request, response){
 
     const body = form(movie);
     response.send(body);   
+}
+export async function editAction(id){
+    let movie=get(id);
+    const body = editMovieView(movie);
+
 }
 
 export async function saveAction(request, response){

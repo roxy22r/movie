@@ -16,7 +16,7 @@ let    data = [
         data.push(movie);
     }
 
-    function update(movie){
+    function update(id){
         
     }
     export function getAll(){
@@ -24,7 +24,8 @@ let    data = [
     }
 
     export function get(id){
-        //TODO
+        return data.get(id);
+        
       
     }
 
