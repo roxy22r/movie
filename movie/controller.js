@@ -10,7 +10,8 @@ export async function listAction(request, response){
 }
 
 export async function removeAction(request,response){
-    console.log("remove")
+    const id = await get(parseInt(request.params.id, 10));
+        await remove(id);
     response.redirect(request.baseUrl);
 }
 
