@@ -16,9 +16,10 @@ let    data = [
         data.push(movie);
     }
 
-   export function update(movie){
+  function update(movie){
         const index = data.findIndex(item=>item.id==movie.id);
         data[index] = movie;
+
     }
     export function getAll(){
         return Promise.resolve(data);
@@ -37,6 +38,8 @@ let    data = [
     export function save(movie){
         if(movie.id === ''){
             insert(movie);
+        }else{
+            update(movie);
         }
         return Promise.resolve();
         }

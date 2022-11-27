@@ -11,7 +11,7 @@ export function render(movies) {
                .map((movie)=>  `
       
       
-               <form action="/movie/update" method="post">
+            <form action="/movie/save" method="post">
             
                <input type="hidden" id="id" name="id" value="${ movie.id}" />
                <div>

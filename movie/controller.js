@@ -1,4 +1,4 @@
-import {getAll, remove, get, save, update} from './model.js';
+import {getAll, remove, get, save} from './model.js';
 import {render} from './view.js';
 import {render as form} from './form.js';
 import {render as editMovieView} from'./editMovie_View.js';
@@ -36,16 +36,6 @@ export async function editFormAction(request, response){
     
     }
 }
-export async function updateAction(request, response){
-    const movie = {
-        id: request.body.id,
-        title: request.body.title,
-        year: request.body.year,
-    }
-        await update(movie);
-        response.redirect();
-}
-
 
 export async function saveAction(request, response){
     const movie = {

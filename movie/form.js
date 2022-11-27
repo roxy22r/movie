@@ -18,7 +18,7 @@ export function render(movies)
                   <input type="text" id="year" name="year" value="${movie.year}" />
                 </div>
                <div>        
-                  <button type="submit">speichern</button>
+                  <button type="submit">erstellen</button>
                </div>
             </form>
           </body>
