@@ -15,6 +15,7 @@ td {
     padding: 5px;
 }
 
+
 tbody tr:hover {
     background-color: lightgrey;
 }
@@ -59,6 +60,7 @@ label {
 
 input {
     padding: 0.7em;
+    width: 20px;
 }
 
 input:focus {

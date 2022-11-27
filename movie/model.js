@@ -16,30 +16,27 @@ let    data = [
         data.push(movie);
     }
 
-    function update(id){
-        
+   export function update(movie){
+        const index = data.findIndex(item=>item.id==movie.id);
+        data[index] = movie;
     }
     export function getAll(){
         return Promise.resolve(data);
     }
 
     export function get(id){
-        return data.get(id);
+        return data.filter( i => i.id==id);
         
       
     }
 
     export function remove(id){
-        console.log(id+"TEST");
         data.pop(id);
-        //TODO
     }
 
     export function save(movie){
         if(movie.id === ''){
             insert(movie);
-        }else{
-          update(movie);
         }
         return Promise.resolve();
         }

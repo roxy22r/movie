@@ -1,10 +1,10 @@
-export function render(movie) 
+export function render(movies) 
 { return `  
  <!DOCTYPE html>  <html lang="de ">
      <head> 
          <meta charset="UTF-8">
          <title>Film </title> 
-         <link rel="stylesheet" href=" /style.css" />
+         <link rel="stylesheet" href="/styles.css" />
          </head>
          <body>
             <form action="/movie/save" method="post">
